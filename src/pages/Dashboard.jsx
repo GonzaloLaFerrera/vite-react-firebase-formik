@@ -1,0 +1,21 @@
+import { logout } from "../config/firebase";
+
+const Dashboard = () => {
+
+    const handleLogout = async() => {
+        try {
+            logout();
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+    return (
+        <>
+            <h1>Dashboard (ruta protegida)</h1>
+            <button onClick={handleLogout}>Logout</button>
+        </>
+    );
+};
+
+export default Dashboard;

@@ -104,7 +104,7 @@ const Register = () => {
                         </Box>
                     )
                 }
-            </Formik>
+            </Formik>           
         </Box>
     );
 };

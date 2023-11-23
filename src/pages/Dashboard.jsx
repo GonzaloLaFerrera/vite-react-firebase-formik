@@ -1,5 +1,5 @@
 import { logout } from "../config/firebase";
-import { Button } from "@mui/material";
+import { Box, Button, Container, Typography } from "@mui/material";
 
 const Dashboard = () => {
 
@@ -11,11 +11,11 @@ const Dashboard = () => {
         }
     };
 
-    return (
-        <>
-            <h1>Dashboard (ruta protegida)</h1>
-            <Button variant="contained" onClick={handleLogout}>Logout</Button>
-        </>
+    return (     
+            <Box sx={{ display:'flex',flexDirection:'column' ,maxWidth: '700px', mx:'auto', justifyContent: 'center', mt:6, gap:5 }}>
+                <Typography variant="h2" component='h1' >Dashboard (ruta protegida)</Typography>
+                <Button variant="contained" sx={{maxWidth:'100px', mb:6}} onClick={handleLogout}>Logout</Button>
+            </Box> 
     );
 };
 
